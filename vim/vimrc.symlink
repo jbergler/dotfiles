@@ -1,4 +1,64 @@
-syntax on
+set nocompatible
+filetype off
 
-" Wrap gitcommit file types at the appropriate length
-filetype indent plugin on
+set history=1000
+set wildmode=list:longest
+let mapleader = ","
+
+set title
+set scrolloff=4
+set ruler
+
+" split more naturally
+set mousefocus
+set splitbelow
+set splitright
+map <leader>h :wincmd h<CR>
+map <leader>j :wincmd j<CR>
+map <leader>k :wincmd k<CR>
+map <leader>l :wincmd l<CR>
+
+syntax on
+filetype on
+filetype plugin on
+filetype indent on
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set nobackup " no backup files
+set noswapfile " no swap files
+
+" Some sensible search options
+set hlsearch
+set incsearch " incremental search
+set ignorecase
+set smartcase " except if I type with mixed case
+nmap <silent> <leader><Space> :silent :nohlsearch<CR>
+
+" Some sensible whitespace options
+set listchars=tab:>-,trail:·,eol:$
+nmap <silent> <leader>s :set nolist!<CR>
+
+" Status/Airline options
+" let g:airline#extensions#tabline#enabled = 1
+set laststatus=2
+let g:bufferline_echo=0
+let g:airline_powerline_fonts = 1
+
+" Syntastic Options
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+set sessionoptions-=options
+execute pathogen#infect()
+
+set background=dark " come to the dark side
+colorscheme solarized " be colorful
