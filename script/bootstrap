@@ -27,6 +27,15 @@ fail () {
   exit
 }
 
+self_update () {
+  info "git pull"
+  git pull --quiet
+  success "git up to date"
+  info "git submodule update"
+  git submodule --quiet update --init --recursive
+  success "git submodules up to date"
+}
+
 setup_gitconfig () {
   if ! [ -f git/gitconfig.symlink ]
   then
@@ -137,6 +146,7 @@ install_dotfiles () {
   done
 }
 
+self_update
 setup_gitconfig
 install_dotfiles
 
