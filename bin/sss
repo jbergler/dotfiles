@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+if [ -z "$1" ]
+then
+  echo "give me a host?"
+  exit 1
+fi
+
+rsync -az ~/.dotfiles ~/.antigen $1:~/
+ssh $1 "OVERWRITE_ALL=true ~/.dotfiles/script/bootstrap"
+exec ssh $1
