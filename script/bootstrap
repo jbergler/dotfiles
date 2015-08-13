@@ -29,7 +29,7 @@ fail () {
 
 self_update () {
   info "git pull"
-  git pull --quiet
+  git pull --quiet https://github.com/jbergler/dotfiles master
   success "git up to date"
   info "git submodule update"
   git submodule --quiet update --init --recursive
