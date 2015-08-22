@@ -9,6 +9,11 @@ set title
 set scrolloff=4
 set ruler
 
+" Pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+set sessionoptions-=options
+execute pathogen#infect()
+
 " split more naturally
 set mousefocus
 set splitbelow
@@ -54,11 +59,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
-" Pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-set sessionoptions-=options
-execute pathogen#infect()
 
 set background=dark " come to the dark side
 colorscheme solarized " be colorful
