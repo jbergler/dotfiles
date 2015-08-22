@@ -50,6 +50,15 @@ set laststatus=2
 let g:bufferline_echo=0
 let g:airline_powerline_fonts = 1
 
+" Promptline options
+
+let g:promptline_preset = {
+        \'a' : [ promptline#slices#host() ],
+        \'b' : [ promptline#slices#user() ],
+        \'c' : [ promptline#slices#cwd() ],
+        \'y' : [ promptline#slices#vcs_branch() ],
+        \'warn' : [ promptline#slices#last_exit_code() ]}
+
 " Syntastic Options
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
