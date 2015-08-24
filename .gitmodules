@@ -19,3 +19,6 @@
 [submodule "vim/vim.symlink/bundle/promptline.vim"]
 	path = vim/vim.symlink/bundle/promptline.vim
 	url = https://github.com/edkolev/promptline.vim
+[submodule "vim/vim.symlink/bundle/tmuxline.vim"]
+	path = vim/vim.symlink/bundle/tmuxline.vim
+	url = https://github.com/edkolev/tmuxline.vim.git
