@@ -69,5 +69,16 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" Nerdtree
+noremap <leader>q :NERDTreeToggle<CR>
+autocmd StdinReadPre * let s:std_in=1 " run on startup if no files are open
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Ctrl-P
+let g:ctrlp_match_window_bottom = 0
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" colors
 set background=dark " come to the dark side
 colorscheme solarized " be colorful
