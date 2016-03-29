@@ -91,8 +91,8 @@ prompt_lean_precmd() {
     prompt_lean_jobs=""
     [[ -n $jobs ]] && prompt_lean_jobs="%F{242}["${(j:,:)jobs}"] "
 
-    PROMPT="$prompt_lean_jobs%F{yellow}$prompt_lean_tmux%F{blue}`prompt_lean_pwd` %(?.%F{blue}.%B%F{red})%#%f%b "
-    RPROMPT="%F{yellow}`prompt_lean_cmd_exec_time`%f%F{242}$vcs_info_msg_0_`prompt_lean_git_dirty`$prompt_lean_host%f"
+    PROMPT="$prompt_lean_jobs%F{yellow}$prompt_lean_tmux$prompt_lean_host%F{blue}`prompt_lean_pwd` %(?.%F{blue}.%B%F{red})%#%f%b "
+    RPROMPT="%F{yellow}`prompt_lean_cmd_exec_time`%f%F{242}$vcs_info_msg_0_`prompt_lean_git_dirty`%f"
 
     unset cmd_timestamp # reset value since `preexec` isn't always triggered
 }
@@ -111,7 +111,7 @@ prompt_lean_setup() {
     zstyle ':vcs_info:git*' formats ' %b'
     zstyle ':vcs_info:git*' actionformats ' %b|%a'
 
-    [[ "$SSH_CONNECTION" != '' ]] && prompt_lean_host=" %F{yellow}%m%f"
+    [[ "$SSH_CONNECTION" != '' ]] && prompt_lean_host="%F{yellow}%m%f "
     [[ "$TMUX" != '' ]] && prompt_lean_tmux=$PROMPT_LEAN_TMUX
 }
 
