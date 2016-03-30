@@ -5,7 +5,7 @@
         protocol = https
 [user]
         name = Jonas Bergler
-        email = jonas@meraki.com
+        email = jbergler@meraki.com
 [credential]
         helper = osxkeychain
 [alias]
