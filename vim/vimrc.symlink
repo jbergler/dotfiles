@@ -80,5 +80,5 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " colors
-set background=dark " come to the dark side
-colorscheme solarized " be colorful
+set background=dark
+colorscheme base16-ocean
