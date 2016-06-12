@@ -35,6 +35,7 @@ set noswapfile " no swap files
 
 map <leader>p :set paste!<CR>
 set backspace=indent,eol,start
+cmap w!! %!sudo tee > /dev/null %
 
 " Some sensible search options
 set hlsearch
