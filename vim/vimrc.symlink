@@ -63,17 +63,11 @@ nmap <silent> <leader>s :set nolist!<CR>
   inoremap <silent> <leader>u <C-x><C-u>
 
 " Better focus highlighting
-augroup highlight_follows_focus
+  augroup cursorline
     autocmd!
-    autocmd WinEnter * set cursorline
-    autocmd WinLeave * set nocursorline
-augroup END
-
-augroup highligh_follows_vim
-    autocmd!
-    autocmd FocusGained * set cursorline
-    autocmd FocusLost * set nocursorline
-augroup END
+    autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+    autocmd WinLeave * setlocal nocursorline
+  augroup END
 
 " Status/Airline options
 " let g:airline#extensions#tabline#enabled = 1
@@ -104,3 +98,4 @@ let g:ctrlp_cmd = 'CtrlP'
 " colors
 set background=dark
 colorscheme base16-ocean
+highlight CursorLine term=underline cterm=underline ctermbg=NONE ctermfg=NONE
