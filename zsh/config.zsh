@@ -42,4 +42,16 @@ bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
 
+# Use vim cli mode
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
+
+# Home / End
+bindkey '^A' beginning-of-line
+bindkey '^E' end-of-line
+
 setopt transientrprompt
