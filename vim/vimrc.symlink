@@ -33,6 +33,9 @@ set expandtab
 set nobackup " no backup files
 set noswapfile " no swap files
 
+map <leader>p :set paste!<CR>
+set backspace=indent,eol,start
+
 " Some sensible search options
 set hlsearch
 set incsearch " incremental search
@@ -43,6 +46,33 @@ nmap <silent> <leader><Space> :silent :nohlsearch<CR>
 " Some sensible whitespace options
 set listchars=tab:>-,trail:·,eol:$
 nmap <silent> <leader>s :set nolist!<CR>
+
+" autocomplete in insert mode
+  " files
+  inoremap <silent> <leader>f <C-x><C-f>
+  " keywords from current file
+  inoremap <silent> <leader>n <C-x><C-n>
+  " keywords from current + included files
+  inoremap <silent> <leader>i <C-x><C-i>
+  " whole lines
+  inoremap <silent> <leader>l <C-x><C-l>
+  " tag
+  inoremap <silent> <leader>t <C-x><C-]>
+  " user defined
+  inoremap <silent> <leader>u <C-x><C-u>
+
+" Better focus highlighting
+augroup highlight_follows_focus
+    autocmd!
+    autocmd WinEnter * set cursorline
+    autocmd WinLeave * set nocursorline
+augroup END
+
+augroup highligh_follows_vim
+    autocmd!
+    autocmd FocusGained * set cursorline
+    autocmd FocusLost * set nocursorline
+augroup END
 
 " Status/Airline options
 " let g:airline#extensions#tabline#enabled = 1
