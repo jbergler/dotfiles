@@ -6,6 +6,6 @@ then
   exit 1
 fi
 
-rsync -az ~/.dotfiles ~/.antigen $1:~/
+rsync --delete -az ~/.dotfiles $1:~/
 ssh $1 "OVERWRITE_ALL=true ~/.dotfiles/script/bootstrap"
-exec ssh $1
+exec ssh $@
