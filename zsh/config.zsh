@@ -52,6 +52,8 @@ bindkey '^r' history-incremental-search-backward
 
 # Home / End
 bindkey '^A' beginning-of-line
+bindkey '^[[1~' beginning-of-line
 bindkey '^E' end-of-line
+bindkey '^[[4~' end-of-line
 
 setopt transientrprompt
