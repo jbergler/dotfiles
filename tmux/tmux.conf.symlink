@@ -43,18 +43,11 @@ set -g mouse-resize-pane on
 set -g mouse-select-pane on
 set -g mouse-select-window on
 
-# Zoom Panes
-unbind +
-bind + \
-  new-window -d -n tmux-zoom 'clear && echo TMUX ZOOM && read' \;\
-  swap-pane -s tmux-zoom.0 \;\
-  select-window -t tmux-zoom
-    
-unbind -
-bind - \
-  last-window \;\
-  swap-pane -s tmux-zoom.0 \;\
-  kill-window -t tmux-zoom
+# Split panes using | and -
+bind | split-window -h
+bind - split-window -v
+unbind '"'
+unbind %
 
 # Activity
 setw -g monitor-activity on
@@ -120,7 +113,7 @@ setw -g mode-bg colour238
 # }
 # The panes {
 
-set -g pane-border-bg colour235
+set -g pane-border-bg colour236
 set -g pane-border-fg colour238
 set -g pane-active-border-bg colour236
 set -g pane-active-border-fg colour51
