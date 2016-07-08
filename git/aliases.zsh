@@ -20,5 +20,16 @@ alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 
 gnb () {
   git fetch origin
-  git checkout -b wip/$(date +%Y-%m-%d)/${1:-tmp} ${2:-origin/master}
+  git checkout --track -b wip/$(date +%Y-%m-%d)/${1:-tmp} ${2:-origin/master}
 }
+
+checkoutbranch () {
+  branches=`git branch | grep -i $1 | tr -d '* '`
+  if [[ `echo "$branches" | wc -l | tr -d ' '` != 1 ]]; then
+    echo "Matched multiple branches:"
+    git branch | grep --color -i $1
+    return 1
+  fi
+  git checkout $branches
+}
+
