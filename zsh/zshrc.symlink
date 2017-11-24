@@ -1,3 +1,9 @@
+MY_SHELL=$HOME/local/bin/zsh
+if [[ "$SHELL" != "$MY_SHELL" && -x $MY_SHELL ]]; then
+  export SHELL=$MY_SHELL
+  exec $MY_SHELL
+fi
+
 [[ -a /etc/profile ]] && source /etc/profile
 
 # shortcut to this dotfiles path is $ZSH
