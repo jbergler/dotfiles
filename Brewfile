@@ -5,6 +5,7 @@ tap 'argon/mas'
 
 
 brew 'curl'
+brew 'defaultbrowser'
 brew 'git'
 brew 'gnupg'
 brew 'jq'
@@ -27,6 +28,7 @@ brew 'zsh-history-substring-search'
 brew 'zsh-syntax-highlighting'
 
 cask '1password'
+cask '1password-cli'
 cask 'alfred'
 cask 'apache-directory-studio'
 cask 'caffeine'

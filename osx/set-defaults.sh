@@ -1,4 +1,4 @@
 #!/bin/bash
 
-./osx.sh
-./spectacle.sh
+$ZSH/osx/osx.sh
+$ZSH/osx/spectacle.sh
