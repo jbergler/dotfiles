@@ -1,0 +1,35 @@
+User jbergler
+ControlMaster auto
+ControlPath ~/.ssh/tmp/%h:%p
+ControlPersist 1h
+
+## Meraki Aliases
+
+# dev box
+Host dev
+    ForwardAgent yes
+    Hostname dev114.meraki.com
+
+# jump hosts
+Host sdg0 dal0 fra0 mun0 syd0 sin0
+    ForwardAgent yes
+    Hostname %h.meraki.com
+
+# shards via preferred jumphost
+Host n*
+    ForwardAgent yes
+    ProxyJump sdg0
+    #ProxyCommand ssh sdg0 -W %h:%p
+
+# nodes via selected shard
+Host n*/fd0a:*
+    User root
+    ForwardAgent no
+    ProxyCommand ssh $(dirname %h).meraki.com -W "[$(basename %h)]:%p"
+
+#Host ???0.meraki.com
+#    ForwardAgent yes
+#    ControlMaster auto
+#    ControlPath ~/.ssh/sockets/%h:%p
+#    ControlPersist 1h
+#    User $UNIX_NAME
