@@ -71,9 +71,9 @@ nmap <silent> <leader>s :set nolist!<CR>
 
 " Status/Airline options
 " let g:airline#extensions#tabline#enabled = 1
-set laststatus=2
-let g:bufferline_echo=0
-let g:airline_powerline_fonts = 1
+"set laststatus=2
+"let g:bufferline_echo=0
+"let g:airline_powerline_fonts = 1
 
 " Syntastic Options
 set statusline+=%#warningmsg#
@@ -97,5 +97,5 @@ let g:ctrlp_cmd = 'CtrlP'
 
 " colors
 set background=dark
-colorscheme base16-ocean
-highlight CursorLine term=underline cterm=underline ctermbg=NONE ctermfg=NONE
+colorscheme dracula
+"highlight CursorLine term=underline cterm=underline ctermbg=NONE ctermfg=NONE
