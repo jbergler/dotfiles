@@ -246,8 +246,19 @@
                 }
             ],
             "name": "external keyboard",
+            "parameters": {
+                "delay_milliseconds_before_open_device": 1000
+            },
             "selected": true,
             "simple_modifications": [
+                {
+                    "from": {
+                        "key_code": "left_command"
+                    },
+                    "to": {
+                        "key_code": "left_option"
+                    }
+                },
                 {
                     "from": {
                         "key_code": "left_option"
@@ -478,6 +489,9 @@
                 }
             ],
             "name": "laptop keyboard",
+            "parameters": {
+                "delay_milliseconds_before_open_device": 1000
+            },
             "selected": false,
             "simple_modifications": [],
             "virtual_hid_keyboard": {
