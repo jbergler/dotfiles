@@ -2,6 +2,7 @@
 # General UI/UX                                                               #
 ###############################################################################
 
+
 # Menu bar: disable transparency
 #defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
