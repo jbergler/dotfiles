@@ -53,6 +53,7 @@ cask 'the-unarchiver'
 cask 'vagrant'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
+cask 'visual-studio-code'
 cask 'vlc'
 cask 'wireshark'
 
