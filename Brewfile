@@ -6,6 +6,7 @@ tap 'argon/mas'
 
 brew 'curl'
 brew 'defaultbrowser'
+brew 'fzf'
 brew 'git'
 brew 'gnupg'
 brew 'jq'
