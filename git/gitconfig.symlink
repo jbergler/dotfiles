@@ -6,7 +6,7 @@
 
 [user]
   name = Jonas Bergler
-  email = jbergler@meraki.com
+  email = jonas@bergler.name
 
 [credential]
   helper = osxkeychain
