@@ -63,6 +63,7 @@ cask 'visual-studio-code'
 cask 'vlc'
 cask 'wireshark'
 cask 'ha-menu'
+cask 'hiddenbar'
 
 mas 'Blink Pro', id: 404360415
 mas 'Magnet', id: 441258766
