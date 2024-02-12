@@ -29,7 +29,7 @@
 [core]
   excludesfile = ~/.gitignore
   editor = vim
-  pager = delta
+  #pager = delta
 
 [interactive]
     #diffFilter = delta --color-only --features=interactive
@@ -90,16 +90,24 @@
 
 [http]
 	sslVerify = true
+
 [push]
 	autoSetupRemote = true
+
 [rerere]
 	enabled = true
+
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+
 [init]
 	defaultBranch = main
-#[submodule]
-#	recurse = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[maintenance]
+	repo = /home/jbergler/co/dotfiles
