@@ -1,0 +1,1 @@
+-f 'bestvideo[height<=1440]+bestaudio/best[height<=1440]'

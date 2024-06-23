@@ -10,6 +10,9 @@
 defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write NSGlobalDomain KeyRepeat -int 1
 
+# Use AirDrop over every interface. srsly this should be a default.
+defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
+
 # Set standby delay to 3 hours (default is 1 hour)
 sudo pmset -a standbydelay 10800
 
@@ -45,7 +48,7 @@ defaults write com.apple.systemuiserver menuExtras -array \
 	"/System/Library/CoreServices/Menu Extras/Clock.menu"
 
 # Always open everything in Finder's list view. This is important.
-defaults write com.apple.Finder FXPreferredViewStyle Nlsv
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv";
 
 # Always show extensions in Finder
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true

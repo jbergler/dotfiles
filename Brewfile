@@ -1,6 +1,7 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
+tap 'homebrew/cask-versions'
 tap 'argon/mas'
 
 
@@ -16,7 +17,6 @@ brew 'kustomize'
 brew 'mtr'
 brew 'p7zip'
 brew 'pinentry-mac'
-brew 'podman-desktop'
 brew 'pv'
 brew 'rbenv'
 brew 'ripgrep'
@@ -42,8 +42,9 @@ cask 'alfred'
 cask 'apache-directory-studio'
 cask 'aerial'
 cask 'caffeine'
-cask 'dash'
-cask 'docker'
+cask 'dash6' # 'dash'
+#cask 'docker'
+cask 'podman-desktop'
 cask 'dropbox'
 cask 'firefox'
 cask 'iterm2'
@@ -52,7 +53,7 @@ cask 'notion'
 cask 'omnidisksweeper'
 cask 'omnigraffle'
 cask 'skype'
-cask 'slack'
+# cask 'slack'
 cask 'spotify'
 cask 'sublime-text'
 cask 'the-unarchiver'
@@ -64,7 +65,11 @@ cask 'vlc'
 cask 'wireshark'
 cask 'ha-menu'
 cask 'hiddenbar'
+cask 'audio-hijack'
+cask 'loopback'
+cask 'waves-central' # for clarity vx
+cask 'elgato-stream-deck'
 
-mas 'Blink Pro', id: 404360415
+# mas 'Blink Pro', id: 404360415
 mas 'Magnet', id: 441258766
 

@@ -1,5 +1,19 @@
-User jbergler
 ControlMaster auto
 ControlPath ~/.ssh/tmp/%r@%h:%p
 ControlPersist 1h
 
+AddKeysToAgent yes
+IdentityFile ~/.ssh/id_ed25519
+
+Host msrepro-4.4
+  HostName ec2-54-80-5-136.compute-1.amazonaws.com
+  User ubuntu
+
+ Host msrepro-4.2
+  HostName ec2-54-80-217-125.compute-1.amazonaws.com
+  User ubuntu
+
+Host workstation
+  User ubuntu
+  HostName jonas-bergler-e4f.workstations.build.10gen.cc
+  ForwardAgent yes
