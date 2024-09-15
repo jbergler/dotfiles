@@ -1,7 +1,6 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
-tap 'homebrew/cask-versions'
 tap 'argon/mas'
 
 
@@ -72,4 +71,4 @@ cask 'elgato-stream-deck'
 
 # mas 'Blink Pro', id: 404360415
 mas 'Magnet', id: 441258766
-
+mas 'Parcel', id: 639968404
