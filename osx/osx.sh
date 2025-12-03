@@ -30,23 +30,6 @@ defaults write com.apple.dock autohide-time-modifier -float 0.2
 defaults write com.apple.dock tilesize -int 16
 killall Dock
 
-# Disable the sound effects on boot
-# sudo nvram SystemAudioVolume=" "
-
-# Disable transparency in the menu bar and elsewhere on Yosemite
-# defaults write com.apple.universalaccess reduceTransparency -bool true
-
-# Menu bar: hide the Time Machine, Volume, and User icons
-defaults -currentHost write dontAutoLoad -array \
-	"/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
-	"/System/Library/CoreServices/Menu Extras/Volume.menu" \
-	"/System/Library/CoreServices/Menu Extras/User.menu"
-defaults write com.apple.systemuiserver menuExtras -array \
-	"/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
-	"/System/Library/CoreServices/Menu Extras/AirPort.menu" \
-	"/System/Library/CoreServices/Menu Extras/Battery.menu" \
-	"/System/Library/CoreServices/Menu Extras/Clock.menu"
-
 # Always open everything in Finder's list view. This is important.
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv";
 
@@ -55,9 +38,6 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # Show the ~/Library folder.
 chflags nohidden ~/Library
-
-# Set highlight color to green
-#defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
 
 # Set sidebar icon size to medium
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
@@ -210,14 +190,6 @@ echo -n 'a' | sudo tee /private/var/db/.AccessibilityAPIEnabled > /dev/null 2>&1
 sudo chmod 444 /private/var/db/.AccessibilityAPIEnabled
 # TODO: avoid GUI password prompt somehow (http://apple.stackexchange.com/q/60476/4408)
 #sudo osascript -e 'tell application "System Events" to set UI elements enabled to true'
-
-# Use scroll gesture with the Ctrl (^) modifier key to zoom
-defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
-# Follow the keyboard focus while zoomed in
-defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool false
-# Zoom should use nearest neighbor instead of smoothing.
-defaults write com.apple.universalaccess 'closeViewSmoothImages' -bool false
 
 # Automatically illuminate built-in MacBook keyboard in low light
 defaults write com.apple.BezelServices kDim -bool true
