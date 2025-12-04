@@ -20,7 +20,7 @@ brew 'rbenv'
 brew 'ripgrep'
 brew 'ruby-build'
 brew 'sqlite'
-brew 'tailscale'
+brew 'tailscale-app'
 brew 'tmux'
 brew 'vim'
 brew 'watch'
@@ -69,4 +69,4 @@ cask 'loopback'
 
 # mas 'Blink Pro', id: 404360415
 mas 'Magnet', id: 441258766
-mas 'Parcel', id: 639968404
+mas 'Parcel', id: 375589283
