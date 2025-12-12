@@ -1,1 +1,3 @@
 -f 'bestvideo[height<=1440]+bestaudio/best[height<=1440]'
+-o '%(title)s.%(ext)s'
+-S res,ext:mp4:m4a --recode-video mp4
