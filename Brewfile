@@ -2,6 +2,13 @@ cask_args appdir: '/Applications'
 
 tap 'argon/mas'
 
+# terminal basics
+cask 'font-inconsolata-nerd-font'
+brew 'starship'
+brew 'zsh'
+brew 'zsh-completions'
+brew 'zsh-history-substring-search'
+brew 'zsh-syntax-highlighting'
 
 brew 'curl'
 brew 'defaultbrowser'
@@ -20,17 +27,12 @@ brew 'rbenv'
 brew 'ripgrep'
 brew 'ruby-build'
 brew 'sqlite'
-brew 'tailscale-app'
 brew 'tmux'
 brew 'vim'
 brew 'watch'
 brew 'wget'
 brew 'xz'
 brew 'yq'
-brew 'zsh'
-brew 'zsh-completions'
-brew 'zsh-history-substring-search'
-brew 'zsh-syntax-highlighting'
 brew 'diffutils'
 brew 'coreutils'
 
@@ -51,8 +53,10 @@ cask 'karabiner-elements'
 cask 'notion'
 cask 'omnidisksweeper'
 cask 'omnigraffle'
+cask 'rectangle-pro'
 cask 'slack'
 cask 'sublime-text'
+cask 'tailscale-app'
 cask 'the-unarchiver'
 #cask 'vagrant'
 #cask 'virtualbox'
@@ -68,5 +72,5 @@ cask 'loopback'
 # cask 'elgato-stream-deck'
 
 # mas 'Blink Pro', id: 404360415
-mas 'Magnet', id: 441258766
+# mas 'Magnet', id: 441258766
 mas 'Parcel', id: 375589283
