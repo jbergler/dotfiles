@@ -4,11 +4,12 @@ tap 'argon/mas'
 
 # terminal basics
 cask 'font-inconsolata-nerd-font'
-brew 'starship'
 brew 'zsh'
 brew 'zsh-completions'
 brew 'zsh-history-substring-search'
 brew 'zsh-syntax-highlighting'
+brew 'starship'
+brew 'lsd'
 
 brew 'curl'
 brew 'defaultbrowser'
