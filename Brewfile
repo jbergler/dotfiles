@@ -3,7 +3,7 @@ cask_args appdir: '/Applications'
 tap 'argon/mas'
 
 # terminal basics
-cask 'font-inconsolata-nerd-font'
+cask 'font-meslo-lg-nerd-font'
 brew 'zsh'
 brew 'zsh-completions'
 brew 'zsh-history-substring-search'
