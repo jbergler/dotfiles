@@ -11,5 +11,5 @@ then
   eval $(/opt/homebrew/bin/brew shellenv)
 fi
 
-HOMEBREW_AUTO_UPDATE_SECS=172800 # 2 days
-HOMEBREW_NO_ENV_HINTS=1
+export HOMEBREW_AUTO_UPDATE_SECS=172800 # 2 days
+export HOMEBREW_NO_ENV_HINTS=1
