@@ -1,3 +1,5 @@
 -f 'bestvideo[height<=1440]+bestaudio/best[height<=1440]'
 -o '%(title)s.%(ext)s'
--S res,ext:mp4:m4a --recode-video mp4
+-S res,ext:mkv:m4a
+--sponsorblock-remove sponsor
+--sponsorblock-mark all --embed-chapters --embed-metadata
