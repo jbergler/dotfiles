@@ -7,9 +7,24 @@
 [user]
   name = Jonas Bergler
   email = jonas@bergler.name
+  signingkey = /Users/jbergler/.ssh/id_ed25519.pub
+[gpg]
+  format = ssh
+[commit]
+  gpgsign = true
 
 [credential]
   helper = osxkeychain
+
+
+[includeIf "hasconfig:remote.*.url:*github.com:10gen/**"]
+  path = ~/co/dotfiles/git/mongo.config
+[includeIf "hasconfig:remote.*.url:*github.com/10gen/**"]
+  path = ~/co/dotfiles/git/mongo.config
+[includeIf "hasconfig:remote.*.url:*github.com:wiredtiger/**"]
+  path = ~/co/dotfiles/git/mongo.config
+[includeIf "hasconfig:remote.*.url:*github.com/wiredtiger/**"]
+  path = ~/co/dotfiles/git/mongo.config
 
 [alias]
   co = checkout
@@ -18,7 +33,7 @@
   rank-contributors = !$ZSH/bin/git-rank-contributors
   count   = !git shortlog -sn
   fix     = !HASH=$(git log --pretty=oneline | head -50 | fzf) && git commit --fixup $(echo ${HASH} | awk '{ print $1 }')
-	delete-squashed = "!f() { local targetBranch=${1:-master} && git checkout -q $targetBranch && git branch --merged | grep -v \"\\*\" | xargs -n 1 git branch -d && git for-each-ref refs/heads/ \"--format=%(refname:short)\" | while read branch; do mergeBase=$(git merge-base $targetBranch $branch) && [[ $(git cherry $targetBranch $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == \"-\"* ]] && git branch -D $branch; done; }; f"
+  delete-squashed = "!f() { local targetBranch=${1:-master} && git checkout -q $targetBranch && git branch --merged | grep -v \"\\*\" | xargs -n 1 git branch -d && git for-each-ref refs/heads/ \"--format=%(refname:short)\" | while read branch; do mergeBase=$(git merge-base $targetBranch $branch) && [[ $(git cherry $targetBranch $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == \"-\"* ]] && git branch -D $branch; done; }; f"
 
 [color]
   diff = auto
