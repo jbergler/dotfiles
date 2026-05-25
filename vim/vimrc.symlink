@@ -1,4 +1,4 @@
-set nocompatible
+
 filetype off
 
 set history=1000

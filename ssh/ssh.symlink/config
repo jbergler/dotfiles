@@ -1,3 +1,8 @@
+# Added by OrbStack: 'orb' SSH host for Linux machines
+# This only works if it's at the top of ssh_config (before any Host blocks).
+# This won't be added again if you remove it.
+Include ~/.orbstack/ssh/config
+
 ControlMaster auto
 ControlPath ~/.ssh/tmp/%r@%h:%p
 ControlPersist 1h
@@ -17,3 +22,8 @@ Host workstation
   User ubuntu
   HostName jonas-bergler-e4f.workstations.build.10gen.cc
   ForwardAgent yes
+ 
+
+Host steamdeck
+  User deck
+  HostName 192.168.0.163

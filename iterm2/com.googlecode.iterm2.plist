@@ -38,6 +38,33 @@
 	<true/>
 	<key>ClosingHotkeySwitchesSpaces</key>
 	<true/>
+	<key>CodeReviewSavedPrompts</key>
+	<data>
+	W3sibmFtZSI6IkRlZmF1bHQiLCJ0ZXh0IjoiUmV2aWV3IHRoZSBwZW5kaW5nIGNoYW5n
+	ZXMgaW4gdGhpcyByZXBvLiBGbGFnIGlzc3VlcyBhIGNhcmVmdWwgbWFpbnRhaW5lciB3
+	b3VsZCBibG9jayBvbiBiZWZvcmUgbWVyZ2UsIGluIHJvdWdobHkgdGhpcyBvcmRlcjpc
+	biAgMS4gQ29ycmVjdG5lc3Mg4oCUIGxvZ2ljIGVycm9ycywgYnJva2VuIGludmFyaWFu
+	dHMsIG1pc3NlZCBlZGdlIGNhc2VzLCBvZmYtYnktb25lLCByYWNlcywgbGlmZXRpbWVc
+	L21lbW9yeSBidWdzLCBlcnJvciBwYXRocyB0aGF0IHN3YWxsb3cgZmFpbHVyZXMuXG4g
+	IDIuIFNlY3VyaXR5IOKAlCBpbmplY3Rpb24sIGF1dGhuXC9hdXRoeiBtaXN0YWtlcywg
+	c2VjcmV0IGhhbmRsaW5nLCB1bnNhZmUgZGVzZXJpYWxpemF0aW9uLCB1bnNhZmUgZGVm
+	YXVsdHMsIFRPQ1RPVS5cbiAgMy4gUmVsaWFiaWxpdHkgJiBwZXJmb3JtYW5jZSDigJQg
+	YmxvY2tpbmcgdGhlIHdyb25nIHRocmVhZCwgdW5ib3VuZGVkIHJlc291cmNlIHVzZSwg
+	YWNjaWRlbnRhbCBPKE7CsiksIHJldHJpZXMgd2l0aG91dCBiYWNrb2ZmLCBzaWxlbnQg
+	ZmFpbHVyZSBwYXRocy5cbiAgNC4gQ29udHJhY3QgcmlzayDigJQgYmVoYXZpb3IgY2hh
+	bmdlcyBjYWxsZXJzIHJlbHkgb24sIHNpbGVudGx5IGNoYW5nZWQgZGVmYXVsdHMsIGJy
+	b2tlbiBiYWNrd2FyZCBjb21wYXRpYmlsaXR5LCBtaXNzaW5nIG1pZ3JhdGlvbnMuXG5c
+	bkZvciBlYWNoIGZpbmRpbmcgY2l0ZSBgZmlsZTpsaW5lYCwgZXhwbGFpbiAqd2h5KiBp
+	dCBpcyB3cm9uZyAobm90IHdoYXQgdGhlIGNvZGUgZG9lcyksIGFuZCBwcm9wb3NlIGEg
+	Y29uY3JldGUgZml4IHdoZW4gb25lIGlzIG9idmlvdXMuIEJlIGNhbGlicmF0ZWQ6IGlm
+	IGEgZmluZGluZyBpcyBub3QgaGlnaC1jb25maWRlbmNlLCBzYXkgc28gb3Igc2tpcCBp
+	dC4gVmVyaWZ5IGNsYWltcyBhZ2FpbnN0IHRoZSBhY3R1YWwgY29kZSByYXRoZXIgdGhh
+	biBpbmZlcnJpbmcgZnJvbSBuYW1lcy5cblxuU2tpcCBwdXJlIHN0eWxlLCBmb3JtYXR0
+	aW5nLCBuYW1pbmcsIGFuZCBhbnl0aGluZyBhIGxpbnRlciBvciBDSSBhbHJlYWR5IGVu
+	Zm9yY2VzLlxuXG5JZiB5b3UgZmluZCBub3RoaW5nIHdvcnRoIGZpeGluZywgc2F5IHNv
+	IHBsYWlubHkuIiwidXVpZCI6IjE5RDZDODNELTc4QkYtNDYxQy04NjAzLTU5MUJERkI4
+	QjMwMiJ9XQ==
+	</data>
 	<key>CommandSelection</key>
 	<true/>
 	<key>Control</key>
@@ -991,6 +1018,8 @@
 	<false/>
 	<key>DisableFullscreenTransparency</key>
 	<false/>
+	<key>EnableAPIServer</key>
+	<true/>
 	<key>EnableRendezvous</key>
 	<false/>
 	<key>FocusFollowsMouse</key>
@@ -1864,6 +1893,8 @@
 	<false/>
 	<key>PasteFromClipboard</key>
 	<false/>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>4</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1927,6 +1958,10 @@
 	<false/>
 	<key>TmuxDashboardLimit</key>
 	<integer>10</integer>
+	<key>ToolbeltTools</key>
+	<array>
+		<string>Session Status</string>
+	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
 	<key>URLHandlersByGuid</key>
@@ -1949,8 +1984,37 @@
 	<integer>0</integer>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>Workgroups</key>
+	<data>
+	W3sibmFtZSI6IkNsYXVkZSBDb2RlIiwic2Vzc2lvbnMiOlt7ImNvbW1hbmQiOiIiLCJw
+	ZXJGaWxlQ29tbWFuZCI6IiIsInVuaXF1ZUlkZW50aWZpZXIiOiJidWlsdGluLmNsYXVk
+	ZUNvZGUubWFpbiIsImRpc3BsYXlOYW1lIjoiQ2hhdCIsInVybFN0cmluZyI6IiIsInRv
+	b2xiYXJJdGVtcyI6W3sia2luZCI6Im1vZGVTd2l0Y2hlciJ9LHsia2luZCI6ImdpdFN0
+	YXR1cyJ9XSwibW9kZSI6InJlZ3VsYXIiLCJraW5kIjp7ImtpbmQiOiJyb290In19LHsi
+	Y29tbWFuZCI6ImdpdCBkaWZmdG9vbCAteSAteCB2aW1kaWZmIFxcKGdpdEJhc2UpIiwi
+	cGVyRmlsZUNvbW1hbmQiOiJnaXQgZGlmZnRvb2wgLXkgLXggdmltZGlmZiBcXChnaXRC
+	YXNlKSAtLSBcXChmaWxlKSIsInVuaXF1ZUlkZW50aWZpZXIiOiJidWlsdGluLmNsYXVk
+	ZUNvZGUuZGlmZiIsInBhcmVudElEIjoiYnVpbHRpbi5jbGF1ZGVDb2RlLm1haW4iLCJ1
+	cmxTdHJpbmciOiIiLCJ0b29sYmFySXRlbXMiOlt7ImtpbmQiOiJtb2RlU3dpdGNoZXIi
+	fSx7ImtpbmQiOiJjaGFuZ2VkRmlsZVNlbGVjdG9yIn0seyJraW5kIjoiZ2l0QmFzZVNl
+	bGVjdG9yIn0seyJraW5kIjoibmF2aWdhdGlvbiJ9XSwiZGlzcGxheU5hbWUiOiJEaWZm
+	IiwibW9kZSI6InJlZ3VsYXIiLCJraW5kIjp7ImtpbmQiOiJwZWVyIn19LHsiY29tbWFu
+	ZCI6ImNsYXVkZSBcXChjb2RlUmV2aWV3UHJvbXB0KSAtLWFwcGVuZC1zeXN0ZW0tcHJv
+	bXB0LWZpbGUgJ1xcKGl0ZXJtMi5hcHBCdW5kbGVQYXRoKVwvQ29udGVudHNcL1Jlc291
+	cmNlc1wvY29kZS1yZXZpZXctc3lzdGVtLXByb21wdC50eHQnIC0tc2V0dGluZ3MgJ1xc
+	KGl0ZXJtMi5hcHBCdW5kbGVQYXRoKVwvQ29udGVudHNcL1Jlc291cmNlc1wvY29kZS1y
+	ZXZpZXctc2V0dGluZ3MudHh0JyIsInBlckZpbGVDb21tYW5kIjoiIiwidW5pcXVlSWRl
+	bnRpZmllciI6ImJ1aWx0aW4uY2xhdWRlQ29kZS5yZXZpZXciLCJwYXJlbnRJRCI6ImJ1
+	aWx0aW4uY2xhdWRlQ29kZS5tYWluIiwidXJsU3RyaW5nIjoiIiwidG9vbGJhckl0ZW1z
+	IjpbeyJraW5kIjoibW9kZVN3aXRjaGVyIn0seyJraW5kIjoicmVsb2FkIn1dLCJkaXNw
+	bGF5TmFtZSI6IkNvZGUgUmV2aWV3IiwibW9kZSI6ImNvZGVSZXZpZXciLCJraW5kIjp7
+	ImtpbmQiOiJwZWVyIn19XSwidW5pcXVlSWRlbnRpZmllciI6ImJ1aWx0aW4uY2xhdWRl
+	Q29kZSJ9XQ==
+	</data>
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>findRegex_iTerm</key>
 	<false/>
 </dict>
