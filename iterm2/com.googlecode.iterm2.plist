@@ -23,9 +23,9 @@
 	<key>AiMaxTokens</key>
 	<integer>200000</integer>
 	<key>AiModel</key>
-	<string>claude-sonnet-4-5</string>
+	<string>claude-opus-4-8</string>
 	<key>AiResponseMaxTokens</key>
-	<integer>64000</integer>
+	<integer>128000</integer>
 	<key>AitermURL</key>
 	<string>https://api.anthropic.com/v1/messages</string>
 	<key>AllowClipboardAccess</key>
@@ -35,6 +35,8 @@
 	<key>AutoHideTmuxClientSession</key>
 	<false/>
 	<key>CheckTestRelease</key>
+	<true/>
+	<key>ClaudeCodeTriggersInstalled</key>
 	<true/>
 	<key>ClosingHotkeySwitchesSpaces</key>
 	<true/>
@@ -1071,6 +1073,8 @@
 		<dict>
 			<key>ASCII Anti Aliased</key>
 			<true/>
+			<key>ASCII Ligatures</key>
+			<false/>
 			<key>Allow Title Reporting</key>
 			<false/>
 			<key>Ambiguous Double Width</key>
@@ -1858,7 +1862,52 @@
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Triggers</key>
-			<array/>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>iTermEnterWorkgroupTrigger</string>
+					<key>contentregex</key>
+					<string></string>
+					<key>disabled</key>
+					<false/>
+					<key>eventParams</key>
+					<dict>
+						<key>jobName</key>
+						<string>claude</string>
+					</dict>
+					<key>matchType</key>
+					<integer>113</integer>
+					<key>parameter</key>
+					<string>builtin.claudeCode</string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string></string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>iTermExitWorkgroupTrigger</string>
+					<key>contentregex</key>
+					<string></string>
+					<key>disabled</key>
+					<false/>
+					<key>eventParams</key>
+					<dict>
+						<key>jobName</key>
+						<string>claude</string>
+						<key>leaderOnly</key>
+						<true/>
+					</dict>
+					<key>matchType</key>
+					<integer>114</integer>
+					<key>parameter</key>
+					<string></string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string></string>
+				</dict>
+			</array>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
@@ -1886,6 +1935,8 @@
 	<key>OpenArrangementAtStartup</key>
 	<false/>
 	<key>OpenBookmark</key>
+	<false/>
+	<key>OpenNoWindowsAtStartup</key>
 	<false/>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>0</integer>
@@ -1986,30 +2037,31 @@
 	<string>/-+\~_.</string>
 	<key>Workgroups</key>
 	<data>
-	W3sibmFtZSI6IkNsYXVkZSBDb2RlIiwic2Vzc2lvbnMiOlt7ImNvbW1hbmQiOiIiLCJw
-	ZXJGaWxlQ29tbWFuZCI6IiIsInVuaXF1ZUlkZW50aWZpZXIiOiJidWlsdGluLmNsYXVk
-	ZUNvZGUubWFpbiIsImRpc3BsYXlOYW1lIjoiQ2hhdCIsInVybFN0cmluZyI6IiIsInRv
-	b2xiYXJJdGVtcyI6W3sia2luZCI6Im1vZGVTd2l0Y2hlciJ9LHsia2luZCI6ImdpdFN0
-	YXR1cyJ9XSwibW9kZSI6InJlZ3VsYXIiLCJraW5kIjp7ImtpbmQiOiJyb290In19LHsi
-	Y29tbWFuZCI6ImdpdCBkaWZmdG9vbCAteSAteCB2aW1kaWZmIFxcKGdpdEJhc2UpIiwi
-	cGVyRmlsZUNvbW1hbmQiOiJnaXQgZGlmZnRvb2wgLXkgLXggdmltZGlmZiBcXChnaXRC
-	YXNlKSAtLSBcXChmaWxlKSIsInVuaXF1ZUlkZW50aWZpZXIiOiJidWlsdGluLmNsYXVk
-	ZUNvZGUuZGlmZiIsInBhcmVudElEIjoiYnVpbHRpbi5jbGF1ZGVDb2RlLm1haW4iLCJ1
-	cmxTdHJpbmciOiIiLCJ0b29sYmFySXRlbXMiOlt7ImtpbmQiOiJtb2RlU3dpdGNoZXIi
-	fSx7ImtpbmQiOiJjaGFuZ2VkRmlsZVNlbGVjdG9yIn0seyJraW5kIjoiZ2l0QmFzZVNl
-	bGVjdG9yIn0seyJraW5kIjoibmF2aWdhdGlvbiJ9XSwiZGlzcGxheU5hbWUiOiJEaWZm
-	IiwibW9kZSI6InJlZ3VsYXIiLCJraW5kIjp7ImtpbmQiOiJwZWVyIn19LHsiY29tbWFu
-	ZCI6ImNsYXVkZSBcXChjb2RlUmV2aWV3UHJvbXB0KSAtLWFwcGVuZC1zeXN0ZW0tcHJv
-	bXB0LWZpbGUgJ1xcKGl0ZXJtMi5hcHBCdW5kbGVQYXRoKVwvQ29udGVudHNcL1Jlc291
-	cmNlc1wvY29kZS1yZXZpZXctc3lzdGVtLXByb21wdC50eHQnIC0tc2V0dGluZ3MgJ1xc
-	KGl0ZXJtMi5hcHBCdW5kbGVQYXRoKVwvQ29udGVudHNcL1Jlc291cmNlc1wvY29kZS1y
-	ZXZpZXctc2V0dGluZ3MudHh0JyIsInBlckZpbGVDb21tYW5kIjoiIiwidW5pcXVlSWRl
-	bnRpZmllciI6ImJ1aWx0aW4uY2xhdWRlQ29kZS5yZXZpZXciLCJwYXJlbnRJRCI6ImJ1
-	aWx0aW4uY2xhdWRlQ29kZS5tYWluIiwidXJsU3RyaW5nIjoiIiwidG9vbGJhckl0ZW1z
-	IjpbeyJraW5kIjoibW9kZVN3aXRjaGVyIn0seyJraW5kIjoicmVsb2FkIn1dLCJkaXNw
-	bGF5TmFtZSI6IkNvZGUgUmV2aWV3IiwibW9kZSI6ImNvZGVSZXZpZXciLCJraW5kIjp7
-	ImtpbmQiOiJwZWVyIn19XSwidW5pcXVlSWRlbnRpZmllciI6ImJ1aWx0aW4uY2xhdWRl
-	Q29kZSJ9XQ==
+	W3sibmFtZSI6IkNsYXVkZSBDb2RlIiwidW5pcXVlSWRlbnRpZmllciI6ImJ1aWx0aW4u
+	Y2xhdWRlQ29kZSIsInNlc3Npb25zIjpbeyJkaXNwbGF5TmFtZSI6IkNoYXQiLCJjb21t
+	YW5kIjoiIiwidG9vbGJhckl0ZW1zIjpbeyJraW5kIjoibW9kZVN3aXRjaGVyIn0seyJr
+	aW5kIjoiZ2l0U3RhdHVzIn0seyJraW5kIjoiYXV0b1JlcXVlc3RSZXZpZXdXaGVuSWRs
+	ZSJ9XSwidXJsU3RyaW5nIjoiIiwibW9kZSI6InJlZ3VsYXIiLCJwZXJGaWxlQ29tbWFu
+	ZCI6IiIsImtpbmQiOnsia2luZCI6InJvb3QifSwidW5pcXVlSWRlbnRpZmllciI6ImJ1
+	aWx0aW4uY2xhdWRlQ29kZS5tYWluIn0seyJkaXNwbGF5TmFtZSI6IkRpZmYiLCJjb21t
+	YW5kIjoiZ2l0IGRpZmZ0b29sIC15IC14IHZpbWRpZmYgXFwoZ2l0QmFzZSkiLCJ1cmxT
+	dHJpbmciOiIiLCJ0b29sYmFySXRlbXMiOlt7ImtpbmQiOiJtb2RlU3dpdGNoZXIifSx7
+	ImtpbmQiOiJjaGFuZ2VkRmlsZVNlbGVjdG9yIn0seyJraW5kIjoiZ2l0QmFzZVNlbGVj
+	dG9yIn0seyJraW5kIjoibmF2aWdhdGlvbiJ9XSwibW9kZSI6InJlZ3VsYXIiLCJwZXJG
+	aWxlQ29tbWFuZCI6ImdpdCBkaWZmdG9vbCAteSAteCB2aW1kaWZmIFxcKGdpdEJhc2Up
+	IC0tIFxcKGZpbGUpIiwia2luZCI6eyJraW5kIjoicGVlciJ9LCJwYXJlbnRJRCI6ImJ1
+	aWx0aW4uY2xhdWRlQ29kZS5tYWluIiwidW5pcXVlSWRlbnRpZmllciI6ImJ1aWx0aW4u
+	Y2xhdWRlQ29kZS5kaWZmIn0seyJkaXNwbGF5TmFtZSI6IkNvZGUgUmV2aWV3IiwiY29t
+	bWFuZCI6ImNsYXVkZSBcXChjb2RlUmV2aWV3UHJvbXB0KSAtLWFwcGVuZC1zeXN0ZW0t
+	cHJvbXB0LWZpbGUgJ1xcKGl0ZXJtMi5hcHBCdW5kbGVQYXRoKVwvQ29udGVudHNcL1Jl
+	c291cmNlc1wvY29kZS1yZXZpZXctc3lzdGVtLXByb21wdC50eHQnIC0tc2V0dGluZ3Mg
+	J1xcKGl0ZXJtMi5hcHBCdW5kbGVQYXRoKVwvQ29udGVudHNcL1Jlc291cmNlc1wvY29k
+	ZS1yZXZpZXctc2V0dGluZ3MudHh0JyIsInVybFN0cmluZyI6IiIsInRvb2xiYXJJdGVt
+	cyI6W3sia2luZCI6Im1vZGVTd2l0Y2hlciJ9LHsia2luZCI6InJlbG9hZCJ9LHsia2lu
+	ZCI6ImF1dG9TZW5kQ2xpcHBpbmdzV2hlbklkbGUifV0sIm1vZGUiOiJjb2RlUmV2aWV3
+	IiwicGVyRmlsZUNvbW1hbmQiOiIiLCJraW5kIjp7ImtpbmQiOiJwZWVyIn0sInBhcmVu
+	dElEIjoiYnVpbHRpbi5jbGF1ZGVDb2RlLm1haW4iLCJ1bmlxdWVJZGVudGlmaWVyIjoi
+	YnVpbHRpbi5jbGF1ZGVDb2RlLnJldmlldyJ9XX1d
 	</data>
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
